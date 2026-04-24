@@ -5,19 +5,19 @@ NAVIGATION: Horizontal scrollable section bar at top of page.
             Sidebar provides compact quick-jump + asset/theme controls.
 
 SECTIONS:
-  📊 GEX DASHBOARD      — Live options chain, 5-Greek exposure (GEX/DEX/VEX/
+   GEX DASHBOARD      — Live options chain, 5-Greek exposure (GEX/DEX/VEX/
                            CEX/TEX), heatmap ↔ bars toggle, ALL call/put walls
                            on candlestick, intraday grader (A+→F), economic
                            calendar, risk profile panel, auto-refresh 60s
-  🧊 3-D GREEK SURFACES — Gamma/Delta/Vanna/OI/Volume spatial mappings
+   3-D GREEK SURFACES — Gamma/Delta/Vanna/OI/Volume spatial mappings
                            by strike × expiry (interactive 3-D)
-  🔬 VOLATILITY LAB     — SVI-fitted IV surface, skew chart, term structure,
+   VOLATILITY LAB     — SVI-fitted IV surface, skew chart, term structure,
                            25Δ skew index, Net IV–RV panel, rolling HV (10/20/30),
                            vol cone + current IV overlay, mispricing insights
-  🎯 MAPPING PROBS      — MJD Monte-Carlo PDF heatmap, 3-D density surface,
+   term-structureBS      — MJD Monte-Carlo PDF heatmap, 3-D density surface,
                            OHLC+implied probability, BS P(S>K) heatmap
                            (strike × DTE grid, SOFR-curve + SVI surface)
-  🚨 MACRO / INTEL HUB  — Intraday macro regime, predictive print engine,
+   MACRO / INTEL HUB  — Intraday macro regime, predictive print engine,
                            HMM vol regime, VRP charts, economic indicator dashboard
 
 INSTITUTIONAL ENGINE v2.0:
@@ -27,7 +27,7 @@ INSTITUTIONAL ENGINE v2.0:
   IV.  SVI parametric vol surface (Gatheral 2004) — no-arbitrage, smooth
   V.   Sticky-delta Vanna (VEX) and Charm (CEX) — not static surface
   VI.  5 notional-weighted exposures: GEX, DEX, VEX, TEX, CEX
-  VII. Rolling HV benchmark: IV vs HV-10/20/30 with tail-risk flag
+  VII. Rolling benchmarkark: IV vs HV-10/20/30 with tail-risk flag
   VIII.OI-weighted Greek consistency validation (self-correcting)
   IX.  Vectorized NumPy throughout — real-time performance
 
@@ -3726,7 +3726,7 @@ function initPrice() {
     title:{text:'Intraday  ·  '+LEVELS.ticker+'  ·  '+LEVELS.date,
            font:{size:10,color:TH.t3,family:'JetBrains Mono'},x:.01,xanchor:'left'},
     xaxis:{type:'category',gridcolor:TH.line,gridwidth:1,
-           tickfont:{size:9,family:'JetBrains Mono',color:TH.t3},nticks:8,
+           tickfont:{si'change':'JetBrains Mono',color:TH.t3},nticks:8,
            rangeslider:{visible:false}},
     yaxis:{range:[Y_LO,Y_HI],gridcolor:TH.line,gridwidth:1,
            tickfont:{size:9,family:'JetBrains Mono',color:TH.t3},tickprefix:'$'},
